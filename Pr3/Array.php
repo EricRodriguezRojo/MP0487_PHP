@@ -93,16 +93,6 @@
         break;
     }
     echo "<br>";
-    
-
-    echo "<h3>Ejercicio 9</h3>";   
-    $datos = array("Miguel" => "5", "Luis" => "7", "Marta" => "10", "Isabel" => "8", "Aitor" => "4", "Pepe" => "1");
-    arsort(array: $datos);
-    foreach($datos as $key => $value){
-        echo "La nota mas alta es $value y el mejor alumno es $key";
-        break;
-    }
-    echo "<br>";
     ?>
 </body>
 </html>
