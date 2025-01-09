@@ -50,10 +50,10 @@ function mostrarValorAlmacen()
     global $inventario;
     $valor = 0;
     $valortotal = 0;
-    foreach ($inventario as $categoria => $comics) {
+    foreach ($inventario as $categoria => $comics) { //recorrer el inventario
         foreach ($comics as $comic) {
-            $valor = $comic['precio'] * $comic['stock'];
-            $valortotal = $valor + $valortotal;
+            $valor = $comic['precio'] * $comic['stock']; //multiplicar el precio por el stock
+            $valortotal = $valor + $valortotal;  //sumamos y lo juntamos todos en una variable para tener el valor del almacen
         }
     }
     echo "Total valor almacen es: " . $valortotal; echo "<br>";                       
@@ -65,7 +65,7 @@ function aplicarDescuentoManga()
 
     foreach ($inventario as $categoria => &$comics) {
         foreach ($comics as &$comic) {
-            if($comic['idioma'] == "Japonés"){
+            if($comic['idioma'] == "Japonés"){ // Afectar solamente a comics con el idioma en japonés
                 $comic['precio'] = $comic['precio'] * 0.7; // Aplicar descuento del 30%
             }
         }
